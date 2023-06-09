@@ -22,11 +22,6 @@ setup(
     keywords=("pip", "mtianyan", "xadmin", "Django", "Antd", "Antd Design Pro"),
     description="modern base on models django admin powered by Antd Design Pro",
     long_description="modern base on models django admin powered by Antd Design Pro",
-    license="MIT Licence",
-
-    url="https://github.com/mtianyan/tyadmin_api_cli",
-    author="mtianyan",
-    author_email="mtianyan@qq.com",
 
     packages=find_packages(),
     package_data={

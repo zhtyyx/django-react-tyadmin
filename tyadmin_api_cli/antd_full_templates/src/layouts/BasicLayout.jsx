@@ -42,18 +42,18 @@ const menuDataRender = menuList =>
 
 const defaultFooterDom = (
   <DefaultFooter
-    copyright={`${new Date().getFullYear()} TyAdmin By mtianyan`}
+    copyright={`${new Date().getFullYear()} 城市环境监测管理平台`}
     links={[
       {
-        key: 'TyAdmin',
-        title: 'TyAdmin',
+        key: '城市环境监测管理平台',
+        title: '城市环境监测管理平台',
         href: 'https://pro.ant.design',
         blankTarget: true,
       },
       {
         key: 'github',
         title: <GithubOutlined />,
-        href: 'https://github.com/mtianyan',
+        href: '',
         blankTarget: true,
       },
       {

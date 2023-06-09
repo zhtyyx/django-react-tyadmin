@@ -42,25 +42,25 @@ const UserLayout = props => {
           <div className={styles.top}>
             <div className={styles.header}>
                 <img alt="logo" className={styles.logo} src={logo} />
-                <span className={styles.title}>TyAdmin</span>
+                <span className={styles.title}>城市环境监测管理平台</span>
             </div>
-            <div className={styles.desc}>Generate By TyAdmin Cli</div>
+            <div className={styles.desc}>城市环境监测管理平台</div>
           </div>
           {children}
         </div>
         <DefaultFooter
-          copyright={`${new Date().getFullYear()} TyAdmin By mtianyan`}
+          copyright={`${new Date().getFullYear()} 城市环境监测管理平台`}
           links={[
             {
-              key: 'TyAdmin',
-              title: 'TyAdmin',
-              href: 'https://github.com/mtianyan/tyadmin_api_cli',
+              key: '城市环境监测管理平台',
+              title: '城市环境监测管理平台',
+              href: '',
               blankTarget: true,
             },
             {
               key: 'github',
               title: <GithubOutlined />,
-              href: 'https://github.com/mtianyan',
+              href: '',
               blankTarget: true,
             },
             {

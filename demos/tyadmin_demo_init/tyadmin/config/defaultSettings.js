@@ -10,7 +10,7 @@ const proSettings = {
   menu: {
     locale: true,
   },
-  title: 'TyAdmin',
+  title: '城市环境监测管理平台',
   pwa: false,
   iconfontUrl: '',
 };
