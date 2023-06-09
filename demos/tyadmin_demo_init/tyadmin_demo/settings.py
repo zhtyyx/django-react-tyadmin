@@ -38,7 +38,14 @@ INSTALLED_APPS = [
     'django_filters',
     'rest_framework',
     'demo',
+    'captcha',
+    'tyadmin_api_cli',
+    'tyadmin_api'
 ]
+
+TY_ADMIN_CONFIG = {
+    'GEN_APPS': ['demo']
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
