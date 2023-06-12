@@ -44,7 +44,8 @@ INSTALLED_APPS = [
 ]
 
 TY_ADMIN_CONFIG = {
-    'GEN_APPS': ['demo']
+    'GEN_APPS': ['demo', 'city', 'country', 'region', 'station', 'airqualityconcentration', 'airqualityindex', 'user_profile'],
+    'FORCED_COVER': True,
 }
 
 MIDDLEWARE = [

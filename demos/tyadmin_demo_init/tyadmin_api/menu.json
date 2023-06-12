@@ -34,44 +34,34 @@
         routes:
         [
             {
-                name: '全部字段非必填[被外键关联]',
-                path: '/xadmin/demo/demo_foreign_key',
-                component: './AutoGenPage/DemoForeignKeyList',
-            },
-            {
-                name: '标签[被多对多关联]',
-                path: '/xadmin/demo/tags',
-                component: './AutoGenPage/TagsList',
-            },
-            {
-                name: '分类[被外键关联]',
-                path: '/xadmin/demo/category',
-                component: './AutoGenPage/CategoryList',
-            },
-            {
-                name: '富文本示例[关联外键，多对多标签]',
-                path: '/xadmin/demo/rich_text_demo',
-                component: './AutoGenPage/RichTextDemoList',
-            },
-            {
-                name: '下拉选择示例(choices)',
-                path: '/xadmin/demo/demo_model_require',
-                component: './AutoGenPage/DemoModelRequireList',
-            },
-            {
-                name: '全部字段类型-必填',
-                path: '/xadmin/demo/demo_model',
-                component: './AutoGenPage/DemoModelList',
-            },
-            {
-                name: '全部字段类型-提供默认值',
-                path: '/xadmin/demo/demo_default_model',
-                component: './AutoGenPage/DemoDefaultModelList',
-            },
-            {
-                name: '用户管理',
+                name: 'user',
                 path: '/xadmin/demo/user_profile',
                 component: './AutoGenPage/UserProfileList',
+            },
+            {
+                name: 'city',
+                path: '/xadmin/demo/city',
+                component: './AutoGenPage/CityList',
+            },
+            {
+                name: 'region',
+                path: '/xadmin/demo/region',
+                component: './AutoGenPage/RegionList',
+            },
+            {
+                name: 'station',
+                path: '/xadmin/demo/station',
+                component: './AutoGenPage/StationList',
+            },
+            {
+                name: 'air quality concentration',
+                path: '/xadmin/demo/air_quality_concentration',
+                component: './AutoGenPage/AirQualityConcentrationList',
+            },
+            {
+                name: 'air quality index',
+                path: '/xadmin/demo/air_quality_index',
+                component: './AutoGenPage/AirQualityIndexList',
             }
         ]
     },

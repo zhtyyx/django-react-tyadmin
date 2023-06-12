@@ -133,7 +133,7 @@ let gData = [{'title': '首页', 'key': '/xadmin/index', 'icon': 'dashboard', 'c
     'component': './RechargeActionList',
   }, {'title': '充值方式', 'icon': 'smile', 'key': '/xadmin/pay/recharge_pay', 'component': './RechargePayList'}],
 }, {
-  'title': '用户管理',
+  'title': 'user',
   'icon': 'UsergroupAdd',
   'key': '/xadmin/user',
   'children': [{

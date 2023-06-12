@@ -426,7 +426,7 @@ const [updatePasswordForm] = Form.useForm();
           <Button type="primary" onClick={() => handleModalVisible(true)}>
             <PlusOutlined /> 新建
           </Button>,
-          <Button type="primary" onClick={() => exportExcelAll(paramState, queryUserProfile, table_columns, '用户管理-All')}>
+          <Button type="primary" onClick={() => exportExcelAll(paramState, queryUserProfile, table_columns, 'user-All')}>
             <ExportOutlined /> 导出全部
           </Button>,
           <Input.Search style={{ marginRight: 20 }} placeholder="搜索用户管理" onSearch={value => {
@@ -445,7 +445,7 @@ const [updatePasswordForm] = Form.useForm();
                       actionRef.current.reloadAndRest();
                     }
                     else if (e.key === 'export_current') {
-                      exportExcelCurrent(selectedRows, table_columns, '用户管理-select')
+                      exportExcelCurrent(selectedRows, table_columns, 'user-select')
                     }
                   }}
                   selectedKeys={[]}
