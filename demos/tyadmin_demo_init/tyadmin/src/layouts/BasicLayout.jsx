@@ -47,7 +47,6 @@ const defaultFooterDom = (
       {
         key: '城市环境监测管理平台',
         title: '城市环境监测管理平台',
-        href: 'https://pro.ant.design',
         blankTarget: true,
       },
       {
@@ -57,9 +56,6 @@ const defaultFooterDom = (
         blankTarget: true,
       },
       {
-        key: 'Ant Design',
-        title: 'Ant Design Pro V4',
-        href: 'https://ant.design',
         blankTarget: true,
       },
     ]}

@@ -64,9 +64,6 @@ const UserLayout = props => {
               blankTarget: true,
             },
             {
-              key: 'Ant Design',
-              title: 'Ant Design Pro V4',
-              href: 'https://ant.design',
               blankTarget: true,
             },
           ]}

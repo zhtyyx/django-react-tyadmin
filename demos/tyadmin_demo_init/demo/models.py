@@ -3,6 +3,7 @@ import datetime
 from django.contrib.auth import get_user_model
 from django.contrib.auth.models import AbstractUser
 from django.db import models
+from pyasn1.compat.octets import null
 
 from tyadmin_api_cli.fields import richTextField
 
@@ -37,15 +38,21 @@ class City(models.Model):
     class Meta:
         app_label = 'demo'
 
+    def __str__(self):
+        return self.name
+
 
 
 class Region(models.Model):
     name = models.CharField(max_length=100)
-    population = models.IntegerField()
-    area = models.FloatField()
-    zip_code = models.CharField(max_length=10)
+    population = models.IntegerField(null=True, blank=True)
+    area = models.FloatField(null=True, blank=True)
+    zip_code = models.CharField(max_length=10, null= True, blank=True)
     super_admin = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
     city = models.ForeignKey('City', on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.name
 
 
 class Station(models.Model):
@@ -53,6 +60,9 @@ class Station(models.Model):
     region = models.ForeignKey('Region', on_delete=models.CASCADE)
     city = models.ForeignKey('City', on_delete=models.CASCADE)
     super_admin = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.name
 
 
 
@@ -79,6 +89,6 @@ class AirQualityIndex(models.Model):
     primary_pollutant = models.CharField(max_length=50)
     station_name = models.ForeignKey('Station', on_delete=models.CASCADE)
     city_name = models.ForeignKey('City', on_delete=models.CASCADE)
-    aqi = models.IntegerField()
+    aqi = models.IntegerField(null=True, blank=True)
     update_time = models.DateTimeField()
 
