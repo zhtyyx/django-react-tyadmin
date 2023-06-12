@@ -44,6 +44,11 @@
                 component: './AutoGenPage/CityList',
             },
             {
+                name: 'water',
+                path: '/xadmin/demo/water',
+                component: './AutoGenPage/WaterList',
+            },
+            {
                 name: 'region',
                 path: '/xadmin/demo/region',
                 component: './AutoGenPage/RegionList',
@@ -62,6 +67,26 @@
                 name: 'air quality index',
                 path: '/xadmin/demo/air_quality_index',
                 component: './AutoGenPage/AirQualityIndexList',
+            }
+        ]
+    },
+    {
+        name: 'TyadminBuiltin',
+        icon: 'VideoCamera',
+        path: '/xadmin/sys',
+        routes:
+        [
+            {
+                name: 'TyAdminLog',
+                icon: 'smile',
+                path: '/xadmin/sys/ty_admin_sys_log',
+                component: './TyAdminBuiltIn/TyAdminSysLogList'
+            },
+            {
+                name: 'TyAdminVerify',
+                icon: 'smile',
+                path: '/xadmin/sys/ty_admin_email_verify_record',
+                component: './TyAdminBuiltIn/TyAdminEmailVerifyRecordList'
             }
         ]
     }

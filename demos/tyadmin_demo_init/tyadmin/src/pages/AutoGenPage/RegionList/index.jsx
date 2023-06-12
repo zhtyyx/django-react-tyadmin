@@ -104,10 +104,7 @@ const TableList = () => {
                              dataIndex: 'population',
                              valueType: 'digit',
                              rules: [
-                                     {
-                      required: true,
-                      message: 'population为必填项',
-                     },
+                                     
                              ],
                              
                              
@@ -119,10 +116,7 @@ const TableList = () => {
                              dataIndex: 'area',
                              
                              rules: [
-                                     {
-                      required: true,
-                      message: 'area为必填项',
-                     },
+                                     
                              ],
                              
                              
@@ -134,10 +128,7 @@ const TableList = () => {
                              dataIndex: 'zip_code',
                              
                              rules: [
-                                     {
-                      required: true,
-                      message: 'zip_code为必填项',
-                     },
+                                     
                              ],
                              
                              

@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from django.contrib.auth.models import Permission, Group
 from django.contrib.contenttypes.models import ContentType
-from demo.models import UserProfile, City, Region, Station, AirQualityConcentration, AirQualityIndex
+from demo.models import UserProfile, City, Water, Region, Station, AirQualityConcentration, AirQualityIndex
 
 
 class ContentTypeListSerializer(serializers.ModelSerializer):
@@ -188,6 +188,52 @@ class CityCreateUpdateSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = City
+        fields = "__all__"
+
+    @staticmethod
+    def get_ty_options_display_txt(obj):
+        return str(obj)
+
+
+class WaterListSerializer(serializers.ModelSerializer):
+    
+
+    class UserProfileSerializer(serializers.ModelSerializer):
+        ty_options_display_txt = serializers.SerializerMethodField()
+        class Meta:
+            model = UserProfile
+            fields = "__all__"
+        @staticmethod
+        def get_ty_options_display_txt(obj):
+            return str(obj)
+    super_admin = UserProfileSerializer()
+    class CitySerializer(serializers.ModelSerializer):
+        ty_options_display_txt = serializers.SerializerMethodField()
+        class Meta:
+            model = City
+            fields = "__all__"
+        @staticmethod
+        def get_ty_options_display_txt(obj):
+            return str(obj)
+    city = CitySerializer()
+    key = serializers.CharField(source="pk")
+    ty_options_display_txt = serializers.SerializerMethodField()
+
+    class Meta:
+        model = Water
+        fields = "__all__"
+
+    @staticmethod
+    def get_ty_options_display_txt(obj):
+        return str(obj)
+
+
+class WaterCreateUpdateSerializer(serializers.ModelSerializer):
+    
+    ty_options_display_txt = serializers.SerializerMethodField()
+
+    class Meta:
+        model = Water
         fields = "__all__"
 
     @staticmethod

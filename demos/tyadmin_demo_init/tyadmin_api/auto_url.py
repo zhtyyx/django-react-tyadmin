@@ -14,6 +14,8 @@ router.register('user_profile', auto_views.UserProfileViewSet)
     
 router.register('city', auto_views.CityViewSet)
     
+router.register('water', auto_views.WaterViewSet)
+    
 router.register('region', auto_views.RegionViewSet)
     
 router.register('station', auto_views.StationViewSet)

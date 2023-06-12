@@ -351,7 +351,7 @@ const [updatePasswordForm] = Form.useForm();
           }} />
                                                   <Divider type="vertical" />
                                                   <Popconfirm
-                                                    title="您确定要删除用户管理吗？"
+                                                    title="您确定要删除user吗？"
                                                     placement="topRight"
                                                     onConfirm={() => {
                                                       handleRemove([record])
@@ -419,7 +419,7 @@ const [updatePasswordForm] = Form.useForm();
         scroll={{ x: '100%' }}
         columnsStateMap={columnsStateMap}
         onColumnsStateChange={(map) => setColumnsStateMap(map)}
-        headerTitle="用户管理表格"
+        headerTitle="user表格"
         actionRef={actionRef}
         rowKey="id"
         toolBarRender={(action, { selectedRows }) => [
@@ -429,7 +429,7 @@ const [updatePasswordForm] = Form.useForm();
           <Button type="primary" onClick={() => exportExcelAll(paramState, queryUserProfile, table_columns, 'user-All')}>
             <ExportOutlined /> 导出全部
           </Button>,
-          <Input.Search style={{ marginRight: 20 }} placeholder="搜索用户管理" onSearch={value => {
+          <Input.Search style={{ marginRight: 20 }} placeholder="搜索user" onSearch={value => {
             setParamState({
               search: value,
             });
