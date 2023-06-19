@@ -41,7 +41,13 @@ class City(models.Model):
     def __str__(self):
         return self.name
 
-
+class Water(models.Model):
+    site_no = models.CharField(max_length=100)
+    water_amount = models.FloatField()
+    update_time = models.DateTimeField(auto_now_add=True)
+    create_time = models.DateTimeField()
+    super_admin = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
+    city = models.ForeignKey('City', on_delete=models.CASCADE)
 
 class Region(models.Model):
     name = models.CharField(max_length=100)

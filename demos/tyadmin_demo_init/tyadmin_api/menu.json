@@ -44,6 +44,11 @@
                 component: './AutoGenPage/CityList',
             },
             {
+                name: 'water',
+                path: '/xadmin/demo/water',
+                component: './AutoGenPage/WaterList',
+            },
+            {
                 name: 'region',
                 path: '/xadmin/demo/region',
                 component: './AutoGenPage/RegionList',

@@ -3,11 +3,11 @@ from rest_framework import viewsets
 from tyadmin_api.custom import XadminViewSet
 from django.contrib.auth.models import Permission, Group
 from django.contrib.contenttypes.models import ContentType
-from demo.models import UserProfile, City, Region, Station, AirQualityConcentration, AirQualityIndex
+from demo.models import UserProfile, City, Water, Region, Station, AirQualityConcentration, AirQualityIndex
 
-from tyadmin_api.auto_serializers import PermissionListSerializer, GroupListSerializer, ContentTypeListSerializer, UserProfileListSerializer, CityListSerializer, RegionListSerializer, StationListSerializer, AirQualityConcentrationListSerializer, AirQualityIndexListSerializer
-from tyadmin_api.auto_serializers import PermissionCreateUpdateSerializer, GroupCreateUpdateSerializer, ContentTypeCreateUpdateSerializer, UserProfileCreateUpdateSerializer, CityCreateUpdateSerializer, RegionCreateUpdateSerializer, StationCreateUpdateSerializer, AirQualityConcentrationCreateUpdateSerializer, AirQualityIndexCreateUpdateSerializer
-from tyadmin_api.auto_filters import PermissionFilter, GroupFilter, ContentTypeFilter, UserProfileFilter, CityFilter, RegionFilter, StationFilter, AirQualityConcentrationFilter, AirQualityIndexFilter
+from tyadmin_api.auto_serializers import PermissionListSerializer, GroupListSerializer, ContentTypeListSerializer, UserProfileListSerializer, CityListSerializer, WaterListSerializer, RegionListSerializer, StationListSerializer, AirQualityConcentrationListSerializer, AirQualityIndexListSerializer
+from tyadmin_api.auto_serializers import PermissionCreateUpdateSerializer, GroupCreateUpdateSerializer, ContentTypeCreateUpdateSerializer, UserProfileCreateUpdateSerializer, CityCreateUpdateSerializer, WaterCreateUpdateSerializer, RegionCreateUpdateSerializer, StationCreateUpdateSerializer, AirQualityConcentrationCreateUpdateSerializer, AirQualityIndexCreateUpdateSerializer
+from tyadmin_api.auto_filters import PermissionFilter, GroupFilter, ContentTypeFilter, UserProfileFilter, CityFilter, WaterFilter, RegionFilter, StationFilter, AirQualityConcentrationFilter, AirQualityIndexFilter
 
     
 class PermissionViewSet(XadminViewSet):
@@ -73,6 +73,19 @@ class CityViewSet(XadminViewSet):
             return CityListSerializer
         else:
             return CityCreateUpdateSerializer
+
+    
+class WaterViewSet(XadminViewSet):
+    serializer_class = WaterListSerializer
+    queryset = Water.objects.all().order_by('-pk')
+    filterset_class = WaterFilter
+    search_fields = ["site_no"]
+
+    def get_serializer_class(self):
+        if self.action == "list":
+            return WaterListSerializer
+        else:
+            return WaterCreateUpdateSerializer
 
     
 class RegionViewSet(XadminViewSet):

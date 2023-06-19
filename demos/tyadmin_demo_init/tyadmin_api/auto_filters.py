@@ -2,7 +2,7 @@ from django_filters import rest_framework as filters
 from tyadmin_api.custom import DateFromToRangeFilter
 from django.contrib.auth.models import Permission, Group
 from django.contrib.contenttypes.models import ContentType
-from demo.models import UserProfile, City, Region, Station, AirQualityConcentration, AirQualityIndex
+from demo.models import UserProfile, City, Water, Region, Station, AirQualityConcentration, AirQualityIndex
 
 class PermissionFilter(filters.FilterSet):
     content_type_text = filters.CharFilter(field_name="content_type")
@@ -37,6 +37,16 @@ class CityFilter(filters.FilterSet):
     class Meta:
         model = City
         exclude = ["image","image"]
+
+class WaterFilter(filters.FilterSet):
+    super_admin_text = filters.CharFilter(field_name="super_admin")
+    city_text = filters.CharFilter(field_name="city")
+    update_time = DateFromToRangeFilter(field_name="update_time")
+    create_time = DateFromToRangeFilter(field_name="create_time")
+
+    class Meta:
+        model = Water
+        exclude = []
 
 class RegionFilter(filters.FilterSet):
     super_admin_text = filters.CharFilter(field_name="super_admin")

@@ -266,10 +266,7 @@ const TableList = () => {
                              dataIndex: 'aqi',
                              valueType: 'digit',
                              rules: [
-                                     {
-                      required: true,
-                      message: 'aqi为必填项',
-                     },
+                                     
                              ],
                              
                              
