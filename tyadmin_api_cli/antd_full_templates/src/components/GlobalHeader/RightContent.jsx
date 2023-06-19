@@ -48,19 +48,6 @@ const GlobalHeaderRight = props => {
       {/*  //   //console.log('input', value);*/}
       {/*  // }}*/}
       {/*/>*/}
-      <Tooltip title="使用文档">
-        <a
-          style={{
-            color: 'inherit',
-          }}
-          target="_blank"
-          href="https://github.com/mtianyan/tyadmin_api_cli"
-          rel="noopener noreferrer"
-          className={styles.action}
-        >
-          <QuestionCircleOutlined />
-        </a>
-      </Tooltip>
       {/*<NoticeIconView />*/}
       <Avatar />
       {REACT_APP_ENV && (
